@@ -1,0 +1,43 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <script>        
+        function createObject(propName1, propName2, propValue1, propValue2) {
+            return {
+            [propName1]: propValue1,
+            [propName2]: propValue2,
+            Print(){
+                return `<b>${propName1}:</b> ${propValue1}, <b>${propName2}:</b> ${propValue2} <br>`;
+            }
+            }
+
+        }
+            var Peoples = [
+                new createObject('Имя', 'Возраст', prompt("Имя первого человека"), prompt("Возраст первого человека")),
+                new createObject('Имя', 'Возраст', prompt("Имя второго человека"), prompt("Возраст второго человека")),
+                new createObject('Имя', 'Возраст', prompt("Имя третьего человека"), prompt("Возраст третьего человека"))
+            ];
+            var Books = [
+                new createObject('Название книги', 'Дата публикации', '"Мой лучший враг"', 2015),
+                new createObject('Название книги', 'Дата публикации', '"Искусство любить"', 1956),
+                new createObject('Название книги', 'Дата публикации', '"Между нами горы"', 2010)
+            ];
+            var Cars = [
+                new createObject('Марка', 'Дата выпуска', 'BMW', 2022),
+                new createObject('Марка','Дата выпуска', 'Porsche', 2018),
+                new createObject('Марка','Дата выпуска', 'Audi', 2024)
+            ];
+                for(var i = 0; i < Peoples.length; i++){
+                document.writeln(Peoples[i].Print() + '<br>');
+                }
+                for(var i = 0; i < Books.length; i++){
+                document.writeln(Books[i].Print() + '<br>');
+                }
+                for(var i = 0; i < Cars.length; i++){
+                document.writeln(Cars[i].Print() + '<br>');
+                }
+        </script>
+    </body>
+</head>
+</html>
